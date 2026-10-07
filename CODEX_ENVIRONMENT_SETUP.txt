@@ -1,0 +1,21 @@
+请为当前 GitHub 仓库配置一个名为 pytorch-cpu 的私人 Codex Cloud 环境。
+
+用途：使用 CPU 进行 PyTorch 代码开发和小规模模型训练。
+使用 Python 3.12，并使用仓库根目录下的 .venv。
+安装脚本：bash scripts/setup.sh
+
+请检查以下两项：
+1. .venv/bin/python scripts/check_environment.py
+2. .venv/bin/python examples/train_cpu.py
+
+科学计算依赖记录在 requirements.txt 中。
+PyTorch 和 torchvision 使用 requirements-torch-cpu.txt 指定的官方 CPU wheel。
+请保留这套固定版本；不安装 CUDA。
+
+如果软件包下载被网络策略阻止，仅增加实际需要的官方软件包域名。
+已知域名为 pypi.org、files.pythonhosted.org、download.pytorch.org、
+download-r2.pytorch.org。使用 MPLBACKEND=Agg 绘图。
+
+启动时读取 AGENTS.md，使用 .venv/bin/python 执行 Python。
+不需要后台服务，不自动启动 Jupyter，不需要任何 API 密钥。
+完成安装和验证后给出实际测试结果，供保存和发布环境。
