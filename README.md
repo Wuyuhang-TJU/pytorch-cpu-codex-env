@@ -1,8 +1,20 @@
-# pytorch-lab
+# PyTorch CPU 环境 · Codex Cloud
 
-PyTorch CPU 开发环境，用于代码开发、张量计算和小规模模型训练。
+**一句话：这是 Codex Cloud 云端环境 `pytorch-cpu` 的配置仓库——一键装好固定版本的 PyTorch（仅 CPU）和常用科学计算库，并自动验证环境可用，用于在云端写代码、做张量计算和小规模模型训练。**
 
-本仓库存放依赖、安装脚本和验证示例。Codex 云端环境需要在 Codex 中配置并发布。
+本仓库不放项目代码，只放搭建这个环境所需的依赖清单、安装脚本和验证示例；云端环境本身在 Codex 中配置并发布。
+
+## 仓库内容
+
+| 文件 | 作用 |
+|---|---|
+| `requirements-torch-cpu.txt` | PyTorch 2.7.0、torchvision 0.22.0（官方 CPU wheel 源） |
+| `requirements.txt` | numpy、pandas、scipy、matplotlib、scikit-learn、JupyterLab、tqdm、pytest（固定版本） |
+| `scripts/setup.sh` | 创建 `.venv`、安装依赖并运行两项验证（Codex 的安装脚本） |
+| `scripts/check_environment.py` | 检查是 CPU 版 PyTorch、各库能导入、自动求导正常 |
+| `examples/train_cpu.py` | 用合成数据训练 `y = 3x + 2`，检查训练能收敛 |
+| `AGENTS.md` | 给 Codex 的使用约定（用 `.venv/bin/python`、不假设有 GPU 等） |
+| `CODEX_ENVIRONMENT_SETUP.txt` | 在 Codex 中创建该环境时可直接粘贴的配置说明 |
 
 ## 依赖
 
