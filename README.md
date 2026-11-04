@@ -27,7 +27,7 @@
 ## 在 Codex Cloud 配置
 
 1. 在 Codex 的 `设置 → Codex Cloud → Environments → Create environment`
-   中选择 `Wuyuhang-TJU/pytorch-lab`。也可以从新任务的
+   中选择 `Wuyuhang-TJU/pytorch-cpu-codex-env`。也可以从新任务的
    `Work in → Cloud → Select environment` 进入创建环境。
 2. 环境名称使用 `pytorch-cpu`，仅限本人使用。
 3. 在环境配置对话中要求使用 Python 3.12，执行 `bash scripts/setup.sh`。
